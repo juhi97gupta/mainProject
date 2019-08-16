@@ -1,0 +1,104 @@
+
+<div style="margin-top: 2%; margin-left: auto; margin-right: auto; width:25%;">
+
+<table border="2"><tr> <th>Product Id</th>
+  <th>Product Name</th>
+<th>Merchant</th>
+<th>Product Tag</th>
+<th>Product Company</th>
+<th>Product Photo</th>
+<th>Product Description</th>
+<th>Product Quantity</th>
+<th>Product Category</th>
+<th>Product Sub Category</th>
+<th>Product Sold </th>
+
+
+
+      <th colspan="2">Action</th></tr>
+   
+          <tr *ngFor="let product of products1 ; let i=index"> 
+      <td>{{product.productID}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.merchant}}</td>
+            <td>{{product.tag}}</td>
+            <td>{{product.company}}</td>
+            <td>{{product.photo}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.subcategory}}</td>
+            <td>{{product.soldQuantities}}</td>
+<td><button type="button" class="btn btn-success" (click)='deleteCustomer(i)'>Delete</button></td>
+<td><button type="button" class="btn btn-success" (click)='onUpdate(i)'>Update</button></td></tr></table>
+
+
+<div *ngIf="status">
+  <form (ngSubmit)="updateCustomer()">
+    <div class="form-group">
+      <label for="name">Product Name:-</label>
+      <input type="text" class="form-control" id="mobile" required [(ngModel)]="products.productName" name="mobile">
+    </div>
+    <div class="form-group">
+      <label for="name">Merchant Id:-</label>
+      <input type="text" class="form-control" id="mobile" required [(ngModel)]="products.merchant" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product tag:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.tag" name="balance">
+    </div>
+    
+    <div class="form-group">
+      <label for="age">Product company:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.company" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product photo:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.photo" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product description:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.description" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product quantity:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.quantity" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product category:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.category" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product sub-category:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.subcategory" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product sold quantities:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.soldQuantities" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product price:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.price" name="balance">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Product release date:-</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="products.releaseDate" name="balance">
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>
+</div>
+
+    
